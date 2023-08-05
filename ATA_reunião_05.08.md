@@ -29,10 +29,7 @@ Data         | Local
 Ação         | Responsável   
 ------------ | ------------- 
 primeiras pags|Demetriu e Luana  
------------- | ------------- 
-CRUD e       | Caio e Evandro
-login(Back)  |  
------------- | ------------- 
+CRUD e login(Back)        | Caio e Evandro 
 Modelagem    | Pedro
 
 ###Informações Adicionais
