@@ -32,5 +32,5 @@ primeiras pags|Demetriu e Luana
 CRUD e login(Back)        | Caio e Evandro 
 Modelagem    | Pedro
 
-###Informações Adicionais
+### Informações Adicionais
 * Início oficial do projeto
