@@ -12,8 +12,13 @@ Nossa equipe é composta pelos seguintes desenvolvedores
 O UFPE Map é uma solução de intercomunicação entre centros da UFPE, com ele será possível que alunos de diferentes centros tenham uma comunicação fácil quando o assunto são eventos e acontecimentos ao redor de nosso campus.
 Este GitHub é destinado ao Back-End do nosso projeto, o Front-End pode ser encontrado em: https://github.com/PedroSouza157998/ufpe-map
 
+### [Histórias de usuário »](https://github.com/PedroSouza157998/ufpe-map/blob/main/Hist%C3%B3rias%20de%20usu%C3%A1rio.md)
+
 ### Design e Arquitetura:
 Para a arquitetura de nosso projeto escolhemos utilizar a MVC que é um padrão de arquitetura de software que separa uma aplicação em três componentes principais: Model (Modelo), View (Visualização) e Controller (Controlador), para melhor organização e manutenção do código.
+
+### Ata's de reunião:
+[Ata 05/05/2023 »](https://github.com/PedroSouza157998/ufpe-map/blob/main/ATA_reuni%C3%A3o_05.08.md)
 
 ### Passo a passo para o funcionamento do projeto:
 - Usuário deve possuir o node.js v19 em sua máquina
