@@ -1,4 +1,4 @@
-# ufpe-map-node
+# UFPE Map
 ## Membros
 Nossa equipe é composta pelos seguintes desenvolvedores
 
@@ -22,7 +22,7 @@ Para a arquitetura de nosso projeto escolhemos utilizar a MVC que é um padrão 
 - Para abrir o projeto em sua máquina local utilize o comando `npm run dev`
 
 ### Prototipagem:
-Para termos como base do desenvolvimento do front-end de nossa página estamos utilizando um mock-up no seguinte figma: https://www.figma.com/file/brXLAa8AOVKnMZWaHIXnqr/Prot%C3%B3tipo-UFPE-Map?type=design&node-id=0-1&mode=design&t=K2Ahk6KYM2ZxmDki-0
+Para termos como base do desenvolvimento do front-end de nossa página estamos utilizando um mock-up no [Figma](https://www.figma.com/file/brXLAa8AOVKnMZWaHIXnqr/Prot%C3%B3tipo-UFPE-Map?type=design&node-id=0-1&mode=design&t=K2Ahk6KYM2ZxmDki-0)
 
 ### Modelo ER do banco:
 ![image](https://github.com/PedroSouza157998/ufpe-map-node/assets/78317354/a6fad4b3-364a-4efb-adb3-9fc767d742b8)
