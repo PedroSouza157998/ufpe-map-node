@@ -1,6 +1,6 @@
 import sqlite3 from 'sqlite3';
 
-const DATABASE_FILE = process.env.DATABASE_FILE;
+const DATABASE_FILE = './tmp.bd';
 if (!DATABASE_FILE)
     throw new Error("DATABASE_FILE não informado");
 
