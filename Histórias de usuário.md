@@ -19,3 +19,9 @@ Como organizador de eventos
 Eu gostaria de ter uma forma mais simples de atingir o público UFPE
 Para atingir meu público alvo em eventos acadêmicos
 ```
+
+```
+Como um aluno da UFPE
+Eu gostaria de avaliar os eventos que estão disponiveis e poder ver a avaliação de outros usuários 
+Para poder me certificar se o evento é confiável e informar a comunidade se este é um evento útil
+```
