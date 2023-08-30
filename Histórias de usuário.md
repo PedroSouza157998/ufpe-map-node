@@ -25,3 +25,9 @@ Como um aluno da UFPE
 Eu gostaria de avaliar os eventos que estão disponiveis e poder ver a avaliação de outros usuários 
 Para poder me certificar se o evento é confiável e informar a comunidade se este é um evento útil
 ```
+
+```
+como um usuário novo
+gostaria de criar uma nova conta no aplicativo
+Para poder ter acesso total às funcionalidades da aplicação
+```
