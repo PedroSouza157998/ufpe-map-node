@@ -1,12 +1,30 @@
 import { Router } from 'express';
-import express from 'express';
-import cors from 'cors'
+import express, {Request, Response, NextFunction} from 'express';
+//@ts-ignore
+import cors from 'cors';
 import bodyParser from 'body-parser';
 // import { useRoutes } from './routes';
 import { userRouter } from './routes/user';
 import { localRouter } from './routes/local';
 import { eventoRouter } from './routes/evento';
 import loginRoutes from './routes/login.routes'
+import jwt, { VerifyErrors } from 'jsonwebtoken'
+import {Secret} from './controllers/login'
+
+
+export function verifyJWT(req: Request, res: Response, next: NextFunction){
+  //  const secret = Secret()
+   // const token = req.headers['x-acess-token'];
+   // //@ts-ignore
+    //jwt.verify(token, secret, (err: any , decoded: any) => {
+    //  if(err) return res.status(401).end();
+    //  //@ts-ignore
+    //  if(decoded.userid) req.userId = decoded.userid
+   // })
+  console.log(req, req);
+  next();
+}
+
 
 const app = express();
 var jsonParser = bodyParser.json()

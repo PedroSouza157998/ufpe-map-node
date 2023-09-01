@@ -25,8 +25,12 @@ export async function login(request: Request, response: Response) {
 
     const jwtToken = jwt.sign(
         { email: userWithEmail.email, id: userWithEmail.id },
-        'process.env.JWT_SECRET' || ''
+        'process.env.JWT_SECRET' || secret
     );
 
     response.status(200).json({ token: jwtToken });
+}
+
+export function Secret(){
+    return 'SenhaSecreta'
 }
