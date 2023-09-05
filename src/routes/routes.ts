@@ -1,8 +1,8 @@
 import { Application } from "express";
 import Router from 'express';
-import { userRouter } from "./user";
-import { localRouter } from "./local";
-import { eventoRouter } from "./evento";
+import { userRouter } from "./user.routes";
+import { localRouter } from "./local.routes";
+import { eventoRouter } from "./evento.routes";
 
 
 export const useRoutes = (app: Application) => {

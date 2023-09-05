@@ -3,9 +3,9 @@ import express from 'express';
 import cors from 'cors'
 import bodyParser from 'body-parser';
 // import { useRoutes } from './routes';
-import { userRouter } from './routes/user';
-import { localRouter } from './routes/local';
-import { eventoRouter } from './routes/evento';
+import { userRouter } from './routes/user.routes';
+import { localRouter } from './routes/local.routes';
+import { eventoRouter } from './routes/evento.routes';
 import loginRoutes from './routes/login.routes'
 
 const app = express();
@@ -17,9 +17,7 @@ const routes = Router();
 
 app.use(jsonParser)
 
-// routes.use('/login', loginRoutes);
-
-const apiRouter = Router();
+routes.use('/login', loginRoutes);
 routes.use('/user', userRouter);
 routes.use('/local',localRouter);
 routes.use('/evento',eventoRouter);

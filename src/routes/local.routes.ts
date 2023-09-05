@@ -2,6 +2,10 @@ import { Router } from 'express';
 import { localController} from '../controllers/local';
 
 const localRouter = Router();
+localRouter.use((req, res, next) => {
+    console.log('Validação do middleware ficará aqui!')
+    next()
+})
 localRouter.get('/', localController.listLocals);
 localRouter.post('/', localController.insertLocal);
 localRouter.get('/:id', localController.getLocal);
