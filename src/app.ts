@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import e, { Router } from 'express';
 import express from 'express';
 import cors from 'cors'
 import bodyParser from 'body-parser';
@@ -7,6 +7,11 @@ import { userRouter } from './routes/user.routes';
 import { localRouter } from './routes/local.routes';
 import { eventoRouter } from './routes/evento.routes';
 import loginRoutes from './routes/login.routes'
+
+
+
+
+  
 
 const app = express();
 var jsonParser = bodyParser.json()

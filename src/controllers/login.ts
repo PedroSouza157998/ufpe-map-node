@@ -1,5 +1,10 @@
 import { Request, Response } from "express";
 import jwt from 'jsonwebtoken';
+
+const dotenv = require('dotenv');
+dotenv.config();
+const senha = process.env.JWT_SECRET;
+
 interface IUser {
     email: String;
     senha: String;
@@ -25,8 +30,10 @@ export async function login(request: Request, response: Response) {
 
     const jwtToken = jwt.sign(
         { email: userWithEmail.email, id: userWithEmail.id },
-        'process.env.JWT_SECRET' || ''
+        senha || 'process.env.JWT_SECRET',
     );
 
-    response.status(200).json({ token: jwtToken });
+    response.status(200).json({auth:true, token: jwtToken });
 }
+
+
