@@ -4,22 +4,15 @@ import { badRequest, internalServerError, validateNumber, notFound, ok } from '.
 import { Usuario, usuarioModel } from '../models/user';
 
 const insertUsuario = (req: Request, res: Response) =>{
-    {
-        const usuario = req.body;
-        if (!usuario)
-            return badRequest(res, "Produto inválido");
-
-        if (!usuario.nome)
-            return badRequest(res, 'Informe o seu nome');
-
-        if (!usuario.email)
-            return badRequest(res, 'Informe o seu email');
-
-        if (!usuario.senha)
-            return badRequest(res, 'Informe sua senha');
-    }
-
     const usuario = req.body as Usuario;
+    
+        
+    if (!usuario) return badRequest(res, "Informe um usuário");
+    if (!usuario.nome) return badRequest(res, 'Campo "nome" obrigatório');
+    if (!usuario.email) return badRequest(res, 'Campo "email" obrigatório');
+    if (!usuario.senha) return badRequest(res, 'Campo "senha" obrigatório');
+    
+
     return usuarioModel.insertUsuario(usuario)
         .then(usuario => {
             res.json({

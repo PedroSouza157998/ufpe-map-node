@@ -1,29 +1,22 @@
 import { Request, Response } from "express";
+import { Usuario, usuarioModel } from '../models/user';
 import jwt from 'jsonwebtoken';
 
 const dotenv = require('dotenv');
 dotenv.config();
 const senha = process.env.JWT_SECRET;
 
-interface IUser {
-    email: String;
-    senha: String;
-}
-
-interface IUserId {
-    userId: String;
-}
-
 export async function login(request: Request, response: Response) {
     const { email, password } = request.body;
 
-    const userWithEmail = {email: 'teste@gmail', password: '123456', id: 2}// user.find((user) => user.email === email);
     if (!email) {
         response.status(404).json({ message: "Usuário não encontrado" });
         return;
     }
 
-    if (userWithEmail.password !== password) {
+    const userWithEmail = await usuarioModel.getUsuarioByEmail(email)
+    
+    if (userWithEmail.senha !== password) {
         response.status(401).json({ message: "Email ou senha incorretos"});
         return;
     }

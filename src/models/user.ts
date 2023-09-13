@@ -28,6 +28,11 @@ const getUsuario = async (id: number) => {
     return retorno as Usuario;
 }
 
+const getUsuarioByEmail = async (email: string) => {
+    const retorno = await dbQueryFirst(`SELECT * FROM usuario WHERE email = ?`, [email]);
+    return retorno as Usuario;
+}
+
 const deleteUsuario = async (id: number) => {
     await dbQueryFirst(`DELETE FROM usuario WHERE id = ?`, [id]);
 }
@@ -39,5 +44,6 @@ export const usuarioModel ={
     listUsuarios,
     getUsuario,
     deleteUsuario,
-    updateUsuario
+    updateUsuario,
+    getUsuarioByEmail
 }
