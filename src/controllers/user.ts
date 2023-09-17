@@ -3,7 +3,7 @@ import {Request, Response} from 'express';
 import { badRequest, internalServerError, validateNumber, notFound, ok } from '../services/util';
 import { Usuario, usuarioModel } from '../models/user';
 
-const insertUsuario = (req: Request, res: Response) =>{
+const insertUsuario = async (req: Request, res: Response) =>{
     const usuario = req.body as Usuario;
     
         
@@ -11,6 +11,9 @@ const insertUsuario = (req: Request, res: Response) =>{
     if (!usuario.nome) return badRequest(res, 'Campo "nome" obrigatório');
     if (!usuario.email) return badRequest(res, 'Campo "email" obrigatório');
     if (!usuario.senha) return badRequest(res, 'Campo "senha" obrigatório');
+    //caso o email ja seja cadastrado
+    const usuarioSalvo = await usuarioModel.getUsuarioByEmail(usuario.email);
+    if(usuarioSalvo.email == usuario.email) return badRequest(res, 'Email já cadastrado');       
     
 
     return usuarioModel.insertUsuario(usuario)
