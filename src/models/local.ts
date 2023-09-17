@@ -7,6 +7,7 @@ export type Local = {
 
 const insertLocal = async (local: Local) => {
     await dbQuery(`INSERT INTO local (endereco) VALUES(?)`, [local.endereco])
+    console.log(local)
     let retorno = await dbQuery(`SELECT seq AS Id FROM sqlite_sequence WHERE  name = 'local'`);
     return getLocal(retorno[0].id);
 }

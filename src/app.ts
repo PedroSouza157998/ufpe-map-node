@@ -1,4 +1,4 @@
-import e, { Router } from 'express';
+import { Router } from 'express';
 import express from 'express';
 import cors from 'cors'
 import bodyParser from 'body-parser';
@@ -8,17 +8,13 @@ import { localRouter } from './routes/local.routes';
 import { eventoRouter } from './routes/evento.routes';
 import loginRoutes from './routes/login.routes'
 
-
-
-
-  
-
-const app = express();
-var jsonParser = bodyParser.json()
-
 const port = 3002;
 
+const app = express();
+
 const routes = Router();
+app.use(cors())
+const jsonParser = bodyParser.json()
 
 app.use(jsonParser)
 
@@ -28,12 +24,7 @@ routes.use('/local',localRouter);
 routes.use('/evento',eventoRouter);
 
 app.use('/api/v1', routes);
-// app.use(routes)
-app.use(cors())
 app.use(express.urlencoded());
-// dotenv.config();
-
-// useRoutes(app);
 
 app.listen(port, () => {
   return console.log(`Express is listening at http://localhost:${port}`);

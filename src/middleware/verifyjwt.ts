@@ -9,7 +9,7 @@ const verifyJWT = (req: Request, res: Response, next: any) => {
     const bearer = req.headers.authorization || '';
     const token = bearer.replace('Bearer', '').trim();
     jwt.verify(token, senha , (err, decoded) => {
-        if (err) return res.status(401).end();
+        if (err) return res.send("Error: Invalid Token").status(401);
         //@ts-ignore
         req.id = decoded.id;
         next();
