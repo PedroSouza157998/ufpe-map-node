@@ -19,3 +19,5 @@ Para a arquitetura de nosso projeto escolhemos utilizar a MVC que é um padrão 
 - Em seguida deve ser feito o download do repositório
 - No terminal use o comando `npm install` ou `yarn`
 - Para abrir o projeto em sua máquina local utilize o comando `npm run dev` 
+
+
