@@ -11,6 +11,12 @@ const insertLocal = (req: Request, res: Response) => {
         if (!local.endereco)
             return badRequest(res, 'Informe o endereço');
 
+        if (!local.coordenadax)
+            return badRequest(res, 'Informe a coordenada');
+
+        if (!local.coordenaday)
+            return badRequest(res, 'Informe a coordenada 2');
+
     }
 
     const local = req.body as Local;
