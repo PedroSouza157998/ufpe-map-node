@@ -4,7 +4,6 @@ import cors from 'cors'
 import bodyParser from 'body-parser';
 // import { useRoutes } from './routes';
 import { userRouter } from './routes/user.routes';
-import { localRouter } from './routes/local.routes';
 import { eventoRouter } from './routes/evento.routes';
 import loginRoutes from './routes/login.routes'
 
@@ -20,7 +19,6 @@ app.use(jsonParser)
 
 routes.use('/login', loginRoutes);
 routes.use('/user', userRouter);
-routes.use('/local',localRouter);
 routes.use('/evento',eventoRouter);
 
 app.use('/api/v1', routes);
