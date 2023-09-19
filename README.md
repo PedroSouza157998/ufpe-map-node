@@ -21,3 +21,9 @@ Para a arquitetura de nosso projeto escolhemos utilizar a MVC que é um padrão 
 - Para abrir o projeto em sua máquina local utilize o comando `npm run dev` 
 
 
+###### Acontecimentos do projeto e lições aprendidas
+- Um dos maiores problemas que tivemos durante o projeto foi com as rotas do next v13, ficamos impossibilitados de utilizar as rotas como planejávamos, e para resolver esse problema não encontramos outra solução além de regredir o next para sua versão 12, com isso conseguimos seguir adiante com o projeto
+- Outra falha que deu dor de cabeça durante a implementação do projeto foi um erro que acontecia quando utilizavamos um middleware, batemos um pouco de cabeça e a solução era relativamente simples
+- Também nos arrependemos de não utilizar migration, ajudaria bastante no versionamento do banco de dados
+
+
