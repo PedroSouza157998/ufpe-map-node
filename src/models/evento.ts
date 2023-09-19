@@ -7,18 +7,20 @@ export type Evento = {
     descricao: string;
     data: string;
     local: string;
+    coordenadax: number;
+    coordenaday: number;
 }
 
 
 const insertEvento = async (evento: Evento) => {
-    await dbQuery(`INSERT INTO evento (titulo,descricao,data,local) VALUES(?, ?, ?, ?)`, [evento.titulo,evento.descricao, evento.data, evento.local])
+    await dbQuery(`INSERT INTO evento (titulo,descricao,data,local,coordenadax,coordenaday) VALUES(?, ?, ?, ?,?,?)`, [evento.titulo,evento.descricao, evento.data, evento.local,evento.coordenadax,evento.coordenaday])
     let retorno = await dbQuery(`SELECT seq AS Id FROM sqlite_sequence WHERE  name = 'evento'`);
     return getEvento(retorno[0].id);
 }
 
 const updateEvento = async (evento: Evento) => {
     console.log(evento)
-    await dbQuery(`UPDATE evento SET titulo = ?, descricao = ?, data = ?, local = ? WHERE id = ?`, [evento.titulo,evento.descricao,evento.data,evento.id,evento.local])
+    await dbQuery(`UPDATE evento SET titulo = ?, descricao = ?, data = ?, local = ?, coordenadax = ? ,coordenaday = ? WHERE id = ?`, [evento.titulo,evento.descricao,evento.data,evento.id,evento.local,evento.coordenadax,evento.coordenaday])
     return getEvento(evento.id);
 }
 
