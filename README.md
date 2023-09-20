@@ -60,11 +60,6 @@ Aproveite a nossa aplicação e explore os recursos disponíveis!
 - a tela de troca de senha foi finalizada mas não conseguimos junta-la ao resto do projeto
 
 
-
-
-
-
-
 [WikiBack-end](wikiBack.md)
 [WikiFront-end](WikiFront-end.md)
 
