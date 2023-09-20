@@ -1,11 +1,11 @@
 # Geral 💻🌐
-Para usos gerais utizamos bibliotecas como: express, body-parser, cors, jsonwebtoken, SQLite3, dotenv, jest, axios
+Para usos gerais utilizamos bibliotecas como: express, body-parser, cors, jsonwebtoken, SQLite3, dotenv, jest, axios
 
 
 ### Middleware 🔐	
 Nessa parte do código iremos verificar em rotas específicas se o usuário que está tentando acessar possui o Token JWT, este token é entregue ao usuário ao fazer o login, a lógica é bem simples:
-pegamos o header do requerimento e retiramos o token, caso o token seja correspondente com o que é necessário para acessar aquela rota o usuário recebe a autorização para acessa-lá, caso o token não exista ou seja diferente do que o servidor possui o usuário receberá o erro 401.
-Está função será introduziada dentro das rotas com funcionalidades importantes e que precisam de uma camada extra de segurança.
+Pegamos o header do requerimento e retiramos o token, caso o token seja correspondente com o que é necessário para acessar aquela rota o usuário recebe a autorização para acessá-lá, caso o token não exista ou seja diferente do que o servidor possui o usuário receberá o erro 401.
+Esta função será introduzida dentro das rotas com funcionalidades importantes e que precisam de uma camada extra de segurança.
 
 ### Controller💡
 O Controller, intermediará as requisições e respostas entre o front-end(View) e o back-end(Model), toda requisição feita deverá passar pelo Controller, ele vai receber e tratar a requisição de acordo com suas regras de negócio, acessar a Model (banco de dados, serviços, etc) para verificar ou modificar dados, e então retornar a resposta apropriada para a View.
@@ -21,5 +21,5 @@ As rotas são responsáveis por mapear URLs para ações específicas em control
 A pasta services serve para o controller são, os serviços que o back-end irá utilizar, como o banco de dados e as respostas http.
 
 ### App ⌨️
- o arquivo app.ts representa a camada central do projeto, que controla o fluxo principal da aplicação de forma coesa e organizada, seguindo os princípios da arquitetura MVC. É responsável por definir as rotas da aplicação e direcionar as requisições e respostas entre as camadas. Ele configura o servidor HTTP(Express) e mapeia as rotas aos métodos dos controllers específicos, Cada rota é vinculada a um Controller, que por sua vez interage com os models para manipulação dos dados e gera a resposta apropriada.
+O arquivo app.ts representa a camada central do projeto, que controla o fluxo principal da aplicação de forma coesa e organizada, seguindo os princípios da arquitetura MVC. É responsável por definir as rotas da aplicação e direcionar as requisições e respostas entre as camadas. Ele configura o servidor HTTP(Express) e mapeia as rotas aos métodos dos controllers específicos, Cada rota é vinculada a um Controller, que por sua vez interage com os models para manipulação dos dados e gera a resposta apropriada.
 
