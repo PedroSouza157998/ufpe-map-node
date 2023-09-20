@@ -25,5 +25,8 @@ Para a arquitetura de nosso projeto escolhemos utilizar a MVC que é um padrão 
 - Um dos maiores problemas que tivemos durante o projeto foi com as rotas do next v13, ficamos impossibilitados de utilizar as rotas como planejávamos, e para resolver esse problema não encontramos outra solução além de regredir o next para sua versão 12, com isso conseguimos seguir adiante com o projeto
 - Outra falha que deu dor de cabeça durante a implementação do projeto foi um erro que acontecia quando utilizavamos um middleware, batemos um pouco de cabeça e a solução era relativamente simples
 - Também nos arrependemos de não utilizar migration, ajudaria bastante no versionamento do banco de dados
+- no ultimo dia nosso github projetos apagou, não sabemos o que aconteceu, nada foi arquivado, e o workflow não mostra nada, vamos reescreve-lo com o que cada um fez mas as datas estarão erradas
 
+
+[WikiBack-end](wikiBack.md)
 
