@@ -13,9 +13,8 @@ const insertUsuario = async (req: Request, res: Response) =>{
     if (!usuario.senha) return badRequest(res, 'Campo "senha" obrigatório');
     //caso o email ja seja cadastrado
     const usuarioSalvo = await usuarioModel.getUsuarioByEmail(usuario.email);
-    if(usuarioSalvo.email == usuario.email) return badRequest(res, 'Email já cadastrado');       
+    if(usuarioSalvo) return badRequest(res, 'Email já cadastrado');       
     
-
     return usuarioModel.insertUsuario(usuario)
         .then(usuario => {
             res.json({
