@@ -68,3 +68,5 @@ Aproveite a nossa aplicação e explore os recursos disponíveis!
 [WikiBack-end](wikiBack.md)
 [WikiFront-end](WikiFront-end.md)
 
+#### modelo er do projeto
+![image](https://github.com/PedroSouza157998/ufpe-map-node/assets/78317354/a6fad4b3-364a-4efb-adb3-9fc767d742b8)
